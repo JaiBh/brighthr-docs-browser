@@ -1,4 +1,10 @@
+import Header from "@/components/Header";
+
 function page() {
-  return <div>page</div>;
+  return (
+    <>
+      <Header></Header>
+    </>
+  );
 }
 export default page;
