@@ -14,4 +14,4 @@ export type File = {
   updatedAt: string;
 };
 
-export type FileType = "pdf" | "doc" | "doc" | "csv" | "mov";
+export type FileType = "pdf" | "doc" | "csv" | "mov";
