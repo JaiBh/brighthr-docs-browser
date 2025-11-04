@@ -3,7 +3,6 @@ import { Dispatch, SetStateAction, useMemo, useState } from "react";
 import { Input } from "./ui/input";
 import { Search } from "lucide-react";
 import Fuse from "fuse.js";
-import mockDocs from "@/data/docs.json";
 import { Button } from "./ui/button";
 import { separateFoldersFiles, sortDocs } from "@/lib/utils";
 
@@ -14,19 +13,18 @@ interface Props {
 }
 
 function DocsForm({ docs, setDocs, folderHistory }: Props) {
-  const [allDocs] = useState<Doc[]>(mockDocs as Doc[]);
   const [sortNameType, setSortNameType] = useState<"a-z" | "z-a">("a-z");
   const [sortDateType, setSortDateType] = useState<
     "latest-earliest" | "earliest-latest"
   >("earliest-latest");
 
   const fuse = useMemo(() => {
-    return new Fuse(allDocs, {
+    return new Fuse(folderHistory[folderHistory.length - 1], {
       keys: ["name"],
-      threshold: 0.2,
-      ignoreLocation: true,
+      threshold: 0.4,
+      // ignoreLocation: true,
     });
-  }, [allDocs]);
+  }, [folderHistory]);
 
   const onChange = (name: string) => {
     const currentFolder = folderHistory[folderHistory.length - 1];
@@ -52,6 +50,8 @@ function DocsForm({ docs, setDocs, folderHistory }: Props) {
       return;
     }
     const results = fuse.search(name);
+    console.log(results);
+
     setDocs(results.map((r) => r.item));
   };
 
