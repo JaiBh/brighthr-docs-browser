@@ -1,57 +1,606 @@
 [
   {
+    "id": "fld_root_onboarding",
+    "type": "folder",
+    "name": "Onboarding",
+    "createdAt": "2019-01-10",
+    "files": [
+      {
+        "id": "file_welcome_pack",
+        "type": "pdf",
+        "name": "Welcome Pack",
+        "createdAt": "2019-01-10",
+        "updatedAt": "2022-03-15"
+      },
+      {
+        "id": "file_induction_checklist",
+        "type": "doc",
+        "name": "Induction Checklist",
+        "createdAt": "2019-01-12",
+        "updatedAt": "2021-09-01"
+      },
+      {
+        "id": "file_it_setup",
+        "type": "pdf",
+        "name": "IT Setup Guide",
+        "createdAt": "2020-02-05",
+        "updatedAt": "2024-06-11"
+      },
+      {
+        "id": "file_code_of_conduct",
+        "type": "pdf",
+        "name": "Code of Conduct",
+        "createdAt": "2018-12-20",
+        "updatedAt": "2023-01-05"
+      },
+      {
+        "id": "file_onboarding_video",
+        "type": "mov",
+        "name": "Welcome Video",
+        "createdAt": "2019-01-15",
+        "updatedAt": "2019-01-15"
+      }
+    ]
+  },
+  {
+    "id": "fld_root_policies",
+    "type": "folder",
+    "name": "Policies",
+    "createdAt": "2017-05-01",
+    "files": [
+      {
+        "id": "file_sick_leave",
+        "type": "doc",
+        "name": "Sick Leave Policy",
+        "createdAt": "2017-05-01",
+        "updatedAt": "2023-10-02"
+      },
+      {
+        "id": "file_remote_work",
+        "type": "pdf",
+        "name": "Remote Work Policy",
+        "createdAt": "2020-04-05",
+        "updatedAt": "2024-02-14"
+      },
+      {
+        "id": "file_travel_expenses",
+        "type": "doc",
+        "name": "Travel & Expenses Policy",
+        "createdAt": "2016-08-02",
+        "updatedAt": "2022-11-18"
+      },
+      {
+        "id": "file_dress_code",
+        "type": "pdf",
+        "name": "Dress Code",
+        "createdAt": "2015-03-12",
+        "updatedAt": "2019-05-20"
+      },
+      {
+        "id": "file_disciplinary",
+        "type": "pdf",
+        "name": "Disciplinary Procedure",
+        "createdAt": "2016-10-10",
+        "updatedAt": "2021-07-30"
+      }
+    ]
+  },
+  {
+    "id": "fld_root_payroll",
+    "type": "folder",
+    "name": "Payroll",
+    "createdAt": "2016-01-01",
+    "files": [
+      {
+        "id": "fld_payroll_2023",
+        "type": "folder",
+        "name": "Payslips 2023",
+        "createdAt": "2023-01-01",
+        "files": [
+          {
+            "id": "file_ps_jan_2023",
+            "type": "csv",
+            "name": "January Payslips",
+            "createdAt": "2023-02-01",
+            "updatedAt": "2023-02-02"
+          },
+          {
+            "id": "file_ps_feb_2023",
+            "type": "csv",
+            "name": "February Payslips",
+            "createdAt": "2023-03-01",
+            "updatedAt": "2023-03-01"
+          },
+          {
+            "id": "file_ps_mar_2023",
+            "type": "csv",
+            "name": "March Payslips",
+            "createdAt": "2023-04-01",
+            "updatedAt": "2023-04-02"
+          }
+        ]
+      },
+      {
+        "id": "fld_payroll_2024",
+        "type": "folder",
+        "name": "Payslips 2024",
+        "createdAt": "2024-01-01",
+        "files": [
+          {
+            "id": "file_ps_q1_2024",
+            "type": "csv",
+            "name": "Q1 Payslips",
+            "createdAt": "2024-04-01",
+            "updatedAt": "2024-04-01"
+          },
+          {
+            "id": "file_ps_q2_2024",
+            "type": "csv",
+            "name": "Q2 Payslips",
+            "createdAt": "2024-07-01",
+            "updatedAt": "2024-07-02"
+          }
+        ]
+      },
+      {
+        "id": "file_p60_2022",
+        "type": "pdf",
+        "name": "P60 Forms 2022",
+        "createdAt": "2023-01-20",
+        "updatedAt": "2023-01-20"
+      }
+    ]
+  },
+  {
+    "id": "fld_root_performance",
+    "type": "folder",
+    "name": "Performance Reviews",
+    "createdAt": "2018-06-01",
+    "files": [
+      {
+        "id": "fld_perf_2021",
+        "type": "folder",
+        "name": "2021",
+        "createdAt": "2021-01-10",
+        "files": [
+          {
+            "id": "fld_perf_2021_q1",
+            "type": "folder",
+            "name": "Q1",
+            "createdAt": "2021-03-31",
+            "files": [
+              {
+                "id": "fld_perf_2021_q1_managers",
+                "type": "folder",
+                "name": "Managers",
+                "createdAt": "2021-03-31",
+                "files": [
+                  {
+                    "id": "file_mgr_alex_2021q1",
+                    "type": "pdf",
+                    "name": "Alex Johnson Review",
+                    "createdAt": "2021-04-02",
+                    "updatedAt": "2021-04-05"
+                  },
+                  {
+                    "id": "file_mgr_sam_2021q1",
+                    "type": "pdf",
+                    "name": "Sam Patel Review",
+                    "createdAt": "2021-04-03",
+                    "updatedAt": "2021-04-04"
+                  }
+                ]
+              },
+              {
+                "id": "fld_perf_2021_q1_staff",
+                "type": "folder",
+                "name": "Staff",
+                "createdAt": "2021-03-31",
+                "files": [
+                  {
+                    "id": "file_staff_emily_2021q1",
+                    "type": "doc",
+                    "name": "Emily Carter Review",
+                    "createdAt": "2021-04-10",
+                    "updatedAt": "2021-04-12"
+                  },
+                  {
+                    "id": "file_staff_lee_2021q1",
+                    "type": "doc",
+                    "name": "Lee Wong Review",
+                    "createdAt": "2021-04-11",
+                    "updatedAt": "2021-04-13"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "fld_perf_2021_q2",
+            "type": "folder",
+            "name": "Q2",
+            "createdAt": "2021-06-30",
+            "files": [
+              {
+                "id": "file_mgr_alex_2021q2",
+                "type": "pdf",
+                "name": "Alex Johnson Review",
+                "createdAt": "2021-07-05",
+                "updatedAt": "2021-07-06"
+              },
+              {
+                "id": "file_staff_emily_2021q2",
+                "type": "doc",
+                "name": "Emily Carter Review",
+                "createdAt": "2021-07-08",
+                "updatedAt": "2021-07-10"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "fld_perf_2023",
+        "type": "folder",
+        "name": "2023",
+        "createdAt": "2023-01-10",
+        "files": [
+          {
+            "id": "file_perf_guidelines_2023",
+            "type": "pdf",
+            "name": "Review Guidelines",
+            "createdAt": "2023-01-10",
+            "updatedAt": "2023-02-01"
+          },
+          {
+            "id": "file_calibration_notes_2023",
+            "type": "doc",
+            "name": "Calibration Meeting Notes",
+            "createdAt": "2023-03-05",
+            "updatedAt": "2023-03-05"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fld_root_training",
+    "type": "folder",
+    "name": "Training",
+    "createdAt": "2015-09-01",
+    "files": [
+      {
+        "id": "fld_training_health_safety",
+        "type": "folder",
+        "name": "Health & Safety",
+        "createdAt": "2015-09-01",
+        "files": [
+          {
+            "id": "file_fire_safety",
+            "type": "pdf",
+            "name": "Fire Safety Basics",
+            "createdAt": "2016-01-10",
+            "updatedAt": "2020-05-01"
+          },
+          {
+            "id": "file_manual_handling",
+            "type": "pdf",
+            "name": "Manual Handling",
+            "createdAt": "2016-01-15",
+            "updatedAt": "2019-09-21"
+          },
+          {
+            "id": "file_hs_video",
+            "type": "mov",
+            "name": "H&S Induction",
+            "createdAt": "2018-05-20",
+            "updatedAt": "2018-05-20"
+          }
+        ]
+      },
+      {
+        "id": "fld_training_leadership",
+        "type": "folder",
+        "name": "Leadership",
+        "createdAt": "2018-02-12",
+        "files": [
+          {
+            "id": "file_feedback_skills",
+            "type": "doc",
+            "name": "Giving Effective Feedback",
+            "createdAt": "2018-03-01",
+            "updatedAt": "2022-10-11"
+          },
+          {
+            "id": "file_time_mgmt",
+            "type": "pdf",
+            "name": "Time Management",
+            "createdAt": "2017-11-02",
+            "updatedAt": "2021-06-22"
+          }
+        ]
+      },
+      {
+        "id": "file_training_calendar",
+        "type": "csv",
+        "name": "Training Calendar 2025",
+        "createdAt": "2024-11-01",
+        "updatedAt": "2024-11-01"
+      }
+    ]
+  },
+  {
+    "id": "fld_root_events",
+    "type": "folder",
+    "name": "Company Events",
+    "createdAt": "2016-04-12",
+    "files": [
+      {
+        "id": "file_summer_party",
+        "type": "doc",
+        "name": "Summer Party Plan",
+        "createdAt": "2019-06-01",
+        "updatedAt": "2019-06-10"
+      },
+      {
+        "id": "file_winter_gala",
+        "type": "pdf",
+        "name": "Winter Gala Overview",
+        "createdAt": "2018-11-01",
+        "updatedAt": "2022-12-05"
+      },
+      {
+        "id": "file_volunteer_day",
+        "type": "pdf",
+        "name": "Volunteer Day Brief",
+        "createdAt": "2021-08-12",
+        "updatedAt": "2021-08-12"
+      }
+    ]
+  },
+  {
+    "id": "fld_root_it",
+    "type": "folder",
+    "name": "IT",
+    "createdAt": "2015-04-01",
+    "files": [
+      {
+        "id": "file_password_policy",
+        "type": "pdf",
+        "name": "Password Policy",
+        "createdAt": "2015-04-01",
+        "updatedAt": "2023-08-10"
+      },
+      {
+        "id": "file_device_policy",
+        "type": "doc",
+        "name": "Device Usage Policy",
+        "createdAt": "2015-04-02",
+        "updatedAt": "2022-05-05"
+      },
+      {
+        "id": "file_vpn_setup",
+        "type": "pdf",
+        "name": "VPN Setup",
+        "createdAt": "2019-03-05",
+        "updatedAt": "2020-04-10"
+      }
+    ]
+  },
+  {
+    "id": "fld_root_benefits",
+    "type": "folder",
+    "name": "Benefits",
+    "createdAt": "2017-07-07",
+    "files": [
+      {
+        "id": "file_healthcare_overview",
+        "type": "pdf",
+        "name": "Healthcare Overview",
+        "createdAt": "2017-07-07",
+        "updatedAt": "2023-04-04"
+      },
+      {
+        "id": "file_pension_scheme",
+        "type": "pdf",
+        "name": "Pension Scheme",
+        "createdAt": "2017-07-08",
+        "updatedAt": "2022-01-20"
+      },
+      {
+        "id": "file_gym_discount",
+        "type": "doc",
+        "name": "Gym Discount Info",
+        "createdAt": "2018-02-01",
+        "updatedAt": "2019-03-12"
+      }
+    ]
+  },
+  {
+    "id": "fld_root_recruitment",
+    "type": "folder",
+    "name": "Recruitment",
+    "createdAt": "2018-10-01",
+    "files": [
+      {
+        "id": "file_interview_process",
+        "type": "pdf",
+        "name": "Interview Process",
+        "createdAt": "2018-10-02",
+        "updatedAt": "2024-05-16"
+      },
+      {
+        "id": "file_job_desc_template",
+        "type": "doc",
+        "name": "Job Description Template",
+        "createdAt": "2018-11-01",
+        "updatedAt": "2022-08-29"
+      },
+      {
+        "id": "file_offer_letter",
+        "type": "doc",
+        "name": "Offer Letter Template",
+        "createdAt": "2019-01-15",
+        "updatedAt": "2021-02-01"
+      }
+    ]
+  },
+  {
+    "id": "fld_root_legal",
+    "type": "folder",
+    "name": "Legal",
+    "createdAt": "2016-02-01",
+    "files": [
+      {
+        "id": "file_privacy_policy",
+        "type": "pdf",
+        "name": "Privacy Policy",
+        "createdAt": "2016-02-01",
+        "updatedAt": "2023-03-01"
+      },
+      {
+        "id": "file_terms_of_use",
+        "type": "pdf",
+        "name": "Terms of Use",
+        "createdAt": "2016-02-10",
+        "updatedAt": "2022-10-10"
+      },
+      {
+        "id": "file_data_retention",
+        "type": "doc",
+        "name": "Data Retention Policy",
+        "createdAt": "2017-06-15",
+        "updatedAt": "2021-09-09"
+      }
+    ]
+  },
+  {
+    "id": "fld_root_templates",
+    "type": "folder",
+    "name": "Templates",
+    "createdAt": "2015-05-01",
+    "files": [
+      {
+        "id": "file_timesheet_template",
+        "type": "csv",
+        "name": "Timesheet Template",
+        "createdAt": "2015-05-01",
+        "updatedAt": "2019-04-01"
+      },
+      {
+        "id": "file_expense_template",
+        "type": "csv",
+        "name": "Expense Claim Template",
+        "createdAt": "2015-05-03",
+        "updatedAt": "2020-07-20"
+      },
+      {
+        "id": "file_review_form",
+        "type": "doc",
+        "name": "Performance Review Form",
+        "createdAt": "2018-01-11",
+        "updatedAt": "2021-01-11"
+      }
+    ]
+  },
+  {
+    "id": "fld_root_archives",
+    "type": "folder",
+    "name": "Archives",
+    "createdAt": "2014-01-01",
+    "files": [
+      {
+        "id": "file_handbook_2014",
+        "type": "pdf",
+        "name": "Employee Handbook (2014)",
+        "createdAt": "2014-01-01",
+        "updatedAt": "2014-01-01"
+      },
+      {
+        "id": "file_policy_2015",
+        "type": "pdf",
+        "name": "Holiday Policy (2015)",
+        "createdAt": "2015-01-05",
+        "updatedAt": "2015-01-05"
+      },
+      {
+        "id": "file_2016_org_chart",
+        "type": "pdf",
+        "name": "Organisation Chart (2016)",
+        "createdAt": "2016-02-01",
+        "updatedAt": "2016-02-01"
+      }
+    ]
+  },
+  {
+    "id": "fld_root_empty_misc",
+    "type": "folder",
+    "name": "Misc (Empty)",
+    "createdAt": "2020-01-01",
+    "files": []
+  },
+  {
+    "id": "file_public_holiday_policy",
+    "type": "pdf",
+    "name": "Public Holiday Policy",
+    "createdAt": "2016-12-01",
+    "updatedAt": "2016-12-06"
+  },
+  {
+    "id": "file_employee_handbook",
     "type": "pdf",
     "name": "Employee Handbook",
-    "updatedAt": "2017-01-06",
-    "createdAt": "2017-01-06"
+    "createdAt": "2017-01-06",
+    "updatedAt": "2017-01-06"
   },
   {
-    "type": "pdf",
-    "name": "Public Holiday policy",
-    "updatedAt": "2016-12-06",
-    "createdAt": "2016-12-01"
-  },
-  {
+    "id": "fld_root_expenses",
     "type": "folder",
     "name": "Expenses",
     "createdAt": "2017-04-12",
     "files": [
       {
+        "id": "file_exp_claim_form",
         "type": "doc",
-        "name": "Expenses claim form",
-        "updatedAt": "2017-05-02",
-        "createdAt": "2017-04-29"
+        "name": "Expense Claim Form",
+        "createdAt": "2017-04-29",
+        "updatedAt": "2017-05-02"
       },
       {
+        "id": "file_fuel_allowances",
         "type": "doc",
-        "name": "Fuel allowances",
-        "updatedAt": "2017-05-03",
-        "createdAt": "2017-04-12"
+        "name": "Fuel Allowances",
+        "createdAt": "2017-04-12",
+        "updatedAt": "2017-05-03"
+      },
+      {
+        "id": "file_cost_centres",
+        "type": "csv",
+        "name": "Cost Centres",
+        "createdAt": "2016-08-12",
+        "updatedAt": "2016-08-12"
       }
     ]
   },
   {
-    "type": "csv",
-    "name": "Cost centres",
-    "updatedAt": "2016-08-12",
-    "createdAt": "2016-08-12"
-  },
-  {
+    "id": "fld_root_communications",
     "type": "folder",
-    "name": "Misc",
-    "createdAt": "2015-14-05",
+    "name": "Communications",
+    "createdAt": "2020-06-01",
     "files": [
       {
-        "type": "doc",
-        "name": "Christmas party",
-        "updatedAt": "2017-12-02",
-        "createdAt": "2017-11-19"
+        "id": "file_q1_newsletter_2024",
+        "type": "pdf",
+        "name": "Quarterly Newsletter - Q1 2024",
+        "createdAt": "2024-04-10",
+        "updatedAt": "2024-04-10"
       },
       {
-        "type": "mov",
-        "name": "Welcome to the company!",
-        "updatedAt": "2015-04-24",
-        "createdAt": "2015-14-05"
+        "id": "file_brand_tone",
+        "type": "doc",
+        "name": "Brand Tone of Voice",
+        "createdAt": "2020-06-15",
+        "updatedAt": "2022-02-02"
       }
     ]
   }

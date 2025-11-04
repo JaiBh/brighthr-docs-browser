@@ -52,10 +52,10 @@ function DocsList({ docs, setDocs, stack, setStack }: Props) {
               </tr>
             </thead>
             <tbody>
-              {docs.map((doc, index) => {
+              {docs.map((doc) => {
                 return (
                   <tr
-                    key={index}
+                    key={doc.id}
                     className={cn(
                       "border-t",
                       doc.type === "folder" &&
