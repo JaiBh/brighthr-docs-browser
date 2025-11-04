@@ -6,6 +6,10 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+export const formatDate = (raw: string) => {
+  return raw.replace(/-/g, "/");
+};
+
 export const separateFoldersFiles = (docs: Doc[]) => {
   const folders: Folder[] = [];
   const files: File[] = [];
@@ -22,9 +26,10 @@ export const separateFoldersFiles = (docs: Doc[]) => {
 };
 
 export const folderLastUpdated = (folder: Folder) => {
-  if (folder.files.length > 0) {
-    const files = [...folder.files];
+  // how recently folders have been updated is based off the last time one its FILES has been changed - not if a nested folder has it's contents altered.
 
+  if (folder.files.filter((file) => file.type !== "folder").length > 0) {
+    const files = [...folder.files].filter((file) => file.type !== "folder");
     const latestUpdatedFile = files.sort(
       (a, b) =>
         new Date(a.updatedAt).getTime() - new Date(b.updatedAt).getTime()

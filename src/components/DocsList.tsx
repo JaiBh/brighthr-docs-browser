@@ -1,5 +1,5 @@
 import { Doc, Folder as FolderType } from "@/lib/types";
-import { cn, folderLastUpdated } from "@/lib/utils";
+import { cn, folderLastUpdated, formatDate, sortDocs } from "@/lib/utils";
 import { ArrowLeft, File, Folder } from "lucide-react";
 import { ScrollArea, ScrollBar } from "./ui/scroll-area";
 import { SetStateAction, Dispatch, useState } from "react";
@@ -8,28 +8,34 @@ import { Button } from "./ui/button";
 interface Props {
   docs: Doc[];
   setDocs: Dispatch<SetStateAction<Doc[]>>;
-  stack: Doc[][];
-  setStack: Dispatch<SetStateAction<Doc[][]>>;
+  folderHistory: Doc[][];
+  setFolderHistory: Dispatch<SetStateAction<Doc[][]>>;
 }
 
-function DocsList({ docs, setDocs, stack, setStack }: Props) {
+function DocsList({ docs, setDocs, folderHistory, setFolderHistory }: Props) {
   const openFolder = (folder: FolderType) => {
-    setStack((prev) => [...prev, docs]);
-    setDocs(folder.files ?? []);
+    const newDocs = sortDocs("a-z", folder.files);
+    setFolderHistory((prev) => [...prev, newDocs]);
+    setDocs(newDocs);
   };
   const goBack = () => {
-    setStack((prev) => {
-      const last = prev[prev.length - 1];
-      const newStack = prev.slice(0, -1);
-      setDocs(last);
-      return newStack;
+    setFolderHistory((prev) => {
+      const last = prev[prev.length - 2];
+      const newHistory = prev.slice(0, -1);
+      const newDocs = sortDocs("a-z", last);
+      setDocs(newDocs);
+      return newHistory;
     });
   };
 
   return (
     <>
-      <Button disabled={stack.length < 1} className="mt-8" onClick={goBack}>
-        <ArrowLeft></ArrowLeft>
+      <Button
+        disabled={folderHistory.length < 2}
+        className="mt-8"
+        onClick={goBack}
+      >
+        Back
       </Button>
       {docs.length < 1 ? (
         <h3 className="text-center text-muted-foreground my-4">
@@ -67,7 +73,7 @@ function DocsList({ docs, setDocs, stack, setStack }: Props) {
                       }
                     }}
                   >
-                    <th
+                    <td
                       scope="row"
                       align="center"
                       className="py-5 min-w-[80px]"
@@ -87,8 +93,9 @@ function DocsList({ docs, setDocs, stack, setStack }: Props) {
                       {doc.type === "mov" && (
                         <File className="text-purple-500 size-9 p-2 rounded-md bg-primary/5"></File>
                       )}
-                    </th>
+                    </td>
                     <td
+                      role={doc.type === "folder" ? "button" : undefined}
                       className={cn(
                         "py-4 font-semibold min-w-[200px] max-w-[250px] truncate",
                         doc.type === "folder" && "text-primary"
@@ -104,10 +111,11 @@ function DocsList({ docs, setDocs, stack, setStack }: Props) {
                             : doc.updatedAt
                         }
                       >
-                        {(doc.type === "folder"
-                          ? `${folderLastUpdated(doc)}`
-                          : doc.updatedAt
-                        ).replace(/-/g, "/")}
+                        {formatDate(
+                          doc.type === "folder"
+                            ? `${folderLastUpdated(doc)}`
+                            : doc.updatedAt
+                        )}
                       </time>
                     </td>
                   </tr>

@@ -1,7 +1,7 @@
 import { Doc } from "@/lib/types";
 import { Dispatch, SetStateAction, useMemo, useState } from "react";
 import { Input } from "./ui/input";
-import { ArrowDownUp, ArrowUpDown, Search } from "lucide-react";
+import { Search } from "lucide-react";
 import Fuse from "fuse.js";
 import mockDocs from "@/data/docs.json";
 import { Button } from "./ui/button";
@@ -10,9 +10,10 @@ import { separateFoldersFiles, sortDocs } from "@/lib/utils";
 interface Props {
   docs: Doc[];
   setDocs: Dispatch<SetStateAction<Doc[]>>;
+  folderHistory: Doc[][];
 }
 
-function DocsForm({ docs, setDocs }: Props) {
+function DocsForm({ docs, setDocs, folderHistory }: Props) {
   const [allDocs] = useState<Doc[]>(mockDocs as Doc[]);
   const [sortNameType, setSortNameType] = useState<"a-z" | "z-a">("a-z");
   const [sortDateType, setSortDateType] = useState<
@@ -28,13 +29,16 @@ function DocsForm({ docs, setDocs }: Props) {
   }, [allDocs]);
 
   const onChange = (name: string) => {
+    const currentFolder = folderHistory[folderHistory.length - 1];
+
     if (!name) {
-      const sortedDocs = sortDocs("a-z", allDocs);
+      const sortedDocs = sortDocs("a-z", currentFolder);
       setDocs(sortedDocs);
+      return;
     }
 
     if (name.length === 1) {
-      const newDocs = allDocs.filter((doc) =>
+      const newDocs = currentFolder.filter((doc) =>
         doc.name.toLowerCase().includes(name.toLowerCase())
       );
 
@@ -77,11 +81,6 @@ function DocsForm({ docs, setDocs }: Props) {
           }}
         >
           Sort By Name
-          {sortNameType === "a-z" ? (
-            <ArrowUpDown></ArrowUpDown>
-          ) : (
-            <ArrowDownUp></ArrowDownUp>
-          )}
         </Button>
         <Button
           variant={"secondary"}
@@ -104,11 +103,6 @@ function DocsForm({ docs, setDocs }: Props) {
           }}
         >
           Sort Last Updated
-          {sortDateType === "latest-earliest" ? (
-            <ArrowUpDown></ArrowUpDown>
-          ) : (
-            <ArrowDownUp></ArrowDownUp>
-          )}
         </Button>
       </div>
     </div>

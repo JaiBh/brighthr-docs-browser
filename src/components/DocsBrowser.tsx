@@ -11,16 +11,20 @@ function DocsBrowser() {
   const [allDocs] = useState(mockDocs as Doc[]);
   const sortedDocs = sortDocs("a-z", allDocs);
   const [docs, setDocs] = useState<Doc[]>(sortedDocs);
-  const [stack, setStack] = useState<Doc[][]>([]);
+  const [folderHistory, setFolderHistory] = useState<Doc[][]>([allDocs]);
 
   return (
     <section className="section-center mt-8 p-4 border rounded-md">
-      <DocsForm docs={docs} setDocs={setDocs}></DocsForm>
+      <DocsForm
+        docs={docs}
+        setDocs={setDocs}
+        folderHistory={folderHistory}
+      ></DocsForm>
       <DocsList
         docs={docs}
         setDocs={setDocs}
-        stack={stack}
-        setStack={setStack}
+        folderHistory={folderHistory}
+        setFolderHistory={setFolderHistory}
       ></DocsList>
     </section>
   );
