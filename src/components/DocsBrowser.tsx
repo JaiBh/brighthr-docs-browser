@@ -14,7 +14,7 @@ function DocsBrowser() {
   const [folderHistory, setFolderHistory] = useState<Doc[][]>([allDocs]);
 
   return (
-    <section className="section-center mt-8 p-4 border rounded-md">
+    <section className="section-center my-8 p-4 border rounded-md">
       <DocsForm
         docs={docs}
         setDocs={setDocs}
